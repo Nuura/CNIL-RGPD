@@ -169,3 +169,5 @@ Il est important de toujours vérifier son code avant de le publier en ligne.
   
 Si cela doit tout de même être le cas, il existe des solutions (Nommé 'Greffon'), tel que git-crypt, permettant de chiffrer/déchiffrer automatiquement les fichiers.
 
+Des gestionnaires de code proposent ces solutitons, tel que Git, ou Mercurial, qui sont décentralisés, au contraire de SVN (Subversion), qui a besoin d'un serveur local pour fonctionner.
+La plupart de ces gestionnaires proposent une interface web et des outils annexes (Wiki, gestion des bugs), ils peuvent être accessibles via Internet (Github) ou installé en interne sur vos serveurs (GitLab)
