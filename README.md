@@ -182,4 +182,53 @@ Si les données sont stockées uniquement en local ou confinée sur un réseau i
 Si, au contraire, les données doivent passer par un service en ligne, le choix d'héberger soi-même les données, ou de choisir un prestataire se fera en fonction des connaissances en sécurité, et de la qualité de service attendue. :warning: Le fait de passer par un cloud, représente un niveau de sécurité supérieur, mais genère de nouveau risque qui doivent être maitrisés.
 
 
-Si recours a un prestataire d'hébergement, il est important qu'il garantisse la mise en place d emesures de sécurité et de confidentialité adaptées, et suffisamment transparentes.
+Si recours a un prestataire d'hébergement, il est important qu'il garantisse la mise en place de mesures de sécurité et de confidentialité adaptées, et suffisamment transparentes.
+
+Il faut aussi s'assurer de la localication géographique des serveurs qui hébergent les données. En effet, si les données peuvent circuler librement dans l'UE/EEE, il faudra assurer un niveau de protection de données suffisant et approprié en dehors de cet espace.
+
+:warning: Si vous avec besoin d'un prestataire pour héberger des données de santé, s'assurer qu'il est certifié ou agrée pour cette activité :warning:
+
+Les autres points a prendre en compte pour un prestataire sont :
+
+  - L'existence d'une politique de sécurité accessible
+  - Les mesure de sécurité et sûreté physique sur le site d'hébergement
+  - Le chiffrement des données et autres procédé garantissant que le prestataire n'a pas accès à vous données.
+  - La gestion des mises à jour
+  - La réversibilité/portabilité aisée des données, dans un format couramment utilisé, sur demande à tout moment
+  
+## 7. Sécuriser vos sites web, vos applications et vos serveurs
+
+### Sécuriser les communications
+
+Pour sécuriser vos communications, voici les éléments à mettre en place : 
+
+  - Déployer le protocole TLS 1.2 ou 1.2 (En remplacement de SSL), et rendre son utilisation obligatoire sur toutes les pages du site ou pour l'application mobiles.
+  - Limitez les ports de communication strictement nécéssaires au bon fonctionnement des applications installées. Tout les autres doivent être bloqués par le pare-feu
+
+### Sécuriser les authentifications
+
+Il éxiste également des bonnes pratiques pour la sécurisation des authentification, à savoir : 
+
+  - Suivre la recommandation de la CNIL sur les mots de passes (En tant qu'utilisateur d'un site). C'est a dire ne pas utiliser le même mot de passe partout, et non en rapport avec soi.
+  - Ne JAMAIS stocker les mot de passes en clair. Utiliser, par exemple, Bcrypt.
+  - Si des cookies sont utilisés pour l'authentification, il est recommandé de forcer l'HTTPS via l'HSTS, et d'utiliser les indicateurs "secure" et "httpOnly"
+  - Désactiver les suites cryptographiques obsolotès, tel que MD4, MD5 et RC4. Favoriser l'utilisation de l'AES256.
+  - Changer les mots de passes lors de chaque départ d'un administrateur en cas de suspicion de comprmission.
+  - Pour les opération courantes, favoriser l'usage de compte aux privilièges moindres.
+  - Pour la connexion aux serveurs internes, l'utilisation d'un VPN avec authentification forte est préconisée.
+  
+  
+### Sécuriser les infrastructures
+
+Afin de sécuriser les infracstructures utilisées, il est recommandé en premier lieu de faire régulièrement des sauvegardes, si possibles chiffrées et vérifiées. Cela permettra de contourner les attaques de type ransomware, par exemple.
+
+Il est aussi important de limiter le nombre de composants mis en oeuvre (Plus il y a de composants, plus il y a de risques a gérer), et pour chacun vérifier régulièrement les mises à jours.
+
+Pour la base de données, il est recommandé de restreindre au maximum les accès (Filtrage par IP par exemple), d'utiliser des comptes nominatifs pour l'accès, et de créer des comptes spécifique a chaque applications.
+De plus, il faut, éventuellement, révoquer les privilèges d'administration des comptes, pour empêcher la modification de la structure de la base de données.
+Enfin, il est indispensable de se protéger contre les injections SQL et scripts, et favoriser le chiffrement des données.
+
+### Minimiser les données collectées
+
+Les données collectées peuvent être des données sensibles, il est important de réfléchir en amont aux différents type de données qui vont être collectées. Si des données ne sont pas nécéssaires pour tous les utilisateurs, ne pas les collecter.
+    
