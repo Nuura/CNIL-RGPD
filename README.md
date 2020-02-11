@@ -175,4 +175,11 @@ La plupart de ces gestionnaires proposent une interface web et des outils annexe
 
 ## 6.Faire un choix éclairé de son architecture
 
+Pour avoir une vision clair du projet, il est nécésaire de décrire en amont son fonctionnement, et de schématiser le flux de données. 
 
+Si les données sont stockées uniquement en local ou confinée sur un réseau intégralement sous la maitrîse de l'utilisateur (Wifi ou autre réseau local), le point le plus important est la sécurisation des données. Les durées de conservations sur ces données peuvent être déterminées par la personne en charge. Cependant, ces données doivent être supprimables à tout moment. 
+
+Si, au contraire, les données doivent passer par un service en ligne, le choix d'héberger soi-même les données, ou de choisir un prestataire se fera en fonction des connaissances en sécurité, et de la qualité de service attendue. :warning: Le fait de passer par un cloud, représente un niveau de sécurité supérieur, mais genère de nouveau risque qui doivent être maitrisés.
+
+
+Si recours a un prestataire d'hébergement, il est important qu'il garantisse la mise en place d emesures de sécurité et de confidentialité adaptées, et suffisamment transparentes.
