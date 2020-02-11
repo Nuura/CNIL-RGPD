@@ -126,11 +126,33 @@ Les langages et technologies éprouvés sont plus surs. En effet, ils font en g�
 
 Il ne faut pas développer sa solution dans un langage tout juste appris. Cela accroitrai le risque de failles du fait du manque d’expérience.
 
-## 4. Sécurité son environnement de développements
+## 4. Sécurité de son environnement de développement
 
-Il faut, premièrement, recenser les mesures de sécurités existantes et définir un plan d’action permettant d’améliorer la converture de ses risques. 
+Il faut, premièrement, recenser les mesures de sécurités existantes et définir un plan d’action permettant d’améliorer la couverture de ses risques. 
 
-Dans un second temps, prendre en compte les risques sur les outils utilisés, nottament avec les outils SaaS et collaboratifs comme Slack, Trello, Github.
+Dans un second temps, prendre en compte les risques sur les outils utilisés, notamment avec les outils SaaS et collaboratifs comme Slack, Trello, Github.
+
+Pour faciliter le déploiement et limiter les risques, il est conseillé d'établir un document regroupent les mesures de déploiement et indiquant leur fonfiguration. Cela assurera une mise en place homogène des mesures de sécurités sur les postes et serveurs. Des outils existent tels que Ansible, Puppet ou Chef.
+Il est aussi important de maintenir à jour son infrastructure, si possible automatiquement.
+
+Pour la sécurité d'accès, il est important de mettre en place une sécurité par SSH, tout en favorisant une authentification forte sur les services utilisés par l'équipe de développement. Également, il est nécéssaire de journaliser les accès aux machines. :warning: Il est important de ne pas utiliser de compte générique.
 
 
+## 5.Gérer son code source 
 
+Un gestionnaire de code est un software permettant de stocker l'ensemble du code source et des fichiers associés, tout en conservant une chronologie de toute les modification apportées sur les fichiers.
+
+- Il est important de bien paramétrer son environnement, via le gestionnaire de code utilisé il faut mettre en place une authentification forte (+ Authentification par clés SSH de préférence) dès le début du projet. 
+
+- Établir des niveaux d'accès, et en définir les permissions associés. Par exemple, un "Invité" a seulement des droits restreint de lecture, et "Développeur" a les droits d'écriture.
+
+- Faire régulièrement des sauvegardes, plus particulièrement du serveur principal.
+
+- Surtout si plusieurs personnes développenent en même temps sur le projet, il faut mettre en place un système de branche, pour des raisons d'organisations, mais aussi de sécurité : Certains gestionnaires de codes permettent de configurer des branches protégées qui empêchent des modifications non autorisées.
+
+
+Il faut aussi être vigilant sur le contenu et la qualité du code source développé.
+
+Des outils de métriques de qualité de code permettrons de scanner le code dès son commit pour vérifier sa bonne qualité. Pour certains gestionnaires de code, il est possible suite a une configuration de refuser un commit si la qualité n'est pas satisfaisante.
+
+:warning: Il est indispensable de conserver les mots de passes et secret en dehors du dépot. :warning:
