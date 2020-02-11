@@ -65,17 +65,17 @@ Le processus d’anonymisation de données personnelles a pour but de rendre imp
 
 Il ne faut jamais considérer des jeux de données brutes comme anynomes. Le processus d’anonymisation doit empêcher toute manière ré-identification des individus, que ce soit par : 
 
-    • Individualisation : Il n’est pas possible d’isoler unepartie ou la totalité des enregistrement relatifs à un individu.
-    • Crrélation : Le jeu de données ne permet pas de relier deux enregistrements se rapportant à une même personne ou à un groupe de personnes.
-    • Inférence : Il est impossible de déduire la valeur d’un attribut d’une personne depuis des informations internes ou externes au jeu de données.
+   - Individualisation : Il n’est pas possible d’isoler unepartie ou la totalité des enregistrement relatifs à un individu.
+   - Crrélation : Le jeu de données ne permet pas de relier deux enregistrements se rapportant à une même personne ou à un groupe de personnes.
+   - Inférence : Il est impossible de déduire la valeur d’un attribut d’une personne depuis des informations internes ou externes au jeu de données.
 
 Ces traitement impliquent dans la plupart des cas une perte de qualité sur le jeu de données produit.
 
 Information supplémentaires : 
 
-    • L’avis G29 décrit les principales techniques d’anonymisation utilisées aujourd’hui, ainsi que des jeux de données considérés à tort comme anonymes.
-    • Il n’éxiste pas de solution universelle d’anynomisation des données personelles
-    • Le choix d’anonymisation et celui de sa méthode doit se faire au cas par cas selon les contextes d’usage et de besoin. (Nature, utilité, risques pour les personnes)
+   - L’avis G29 décrit les principales techniques d’anonymisation utilisées aujourd’hui, ainsi que des jeux de données considérés à tort comme anonymes.
+   - Il n’éxiste pas de solution universelle d’anynomisation des données personelles
+   - Le choix d’anonymisation et celui de sa méthode doit se faire au cas par cas selon les contextes d’usage et de besoin. (Nature, utilité, risques pour les personnes)
 
 ### La pseudonymisation des données personnelles :
 
@@ -98,27 +98,27 @@ Le RGPD considère que la pseudonymisation permet de réduire les risques pour l
 
 Lors de la mise en place d’un projet, il est préférable de :
 
-    • Mettre la protection de la vie privée au coeur de vos développements en adoptant une méthodologie de Pirvacy By Design.
+   - Mettre la protection de la vie privée au coeur de vos développements en adoptant une méthodologie de Pirvacy By Design.
 
-    • Si utilisation des méthodes agiles il y a, il faut penser a intégrer la sécurité au coeur du processus.
+   - Si utilisation des méthodes agiles il y a, il faut penser a intégrer la sécurité au coeur du processus.
       
-    • Si le projet est à destination du grand public, il est nécéssaire de mener une réglexion sur les paramètres relatifs a la vie privée.
+   - Si le projet est à destination du grand public, il est nécéssaire de mener une réglexion sur les paramètres relatifs a la vie privée.
 
 
 ### Choix technologiques :
 
 Pour l’architecture et les fonctionnalités :
 
-    • Il faut intégrer la protection de la vie privée, y compris les exigences de sécurité des données, dès la conception de l’application ou du service.
+   - Il faut intégrer la protection de la vie privée, y compris les exigences de sécurité des données, dès la conception de l’application ou du service.
       
-    • Garder la maitrise du système, pour garantir un haut niveau de sécurité. Un système clair, correctement conçu, et sécurisé permet une compréhension simple. En augmentant ensuite la compléxité petit à petit, il faut sécurisé les nouveautés qui s’ajoutent.
+   - Garder la maitrise du système, pour garantir un haut niveau de sécurité. Un système clair, correctement conçu, et sécurisé permet une compréhension simple. En augmentant ensuite la compléxité petit à petit, il faut sécurisé les nouveautés qui s’ajoutent.
       
-    • Pour minimiser les risques sur les utilisateurs finaux, il est conseillé de défendre le système en profondeur. (Exemple : Sécurité des champs d’un formulaire + A l’insertion en Base de données)
+   - Pour minimiser les risques sur les utilisateurs finaux, il est conseillé de défendre le système en profondeur. (Exemple : Sécurité des champs d’un formulaire + A l’insertion en Base de données)
 
 
 Pour les outils et les pratiques : 
 
-    • Utiliser des normes de programmation prenant en compte la sécurité. Des outils annexes peuvent être intégrés en utilisant un IDE, pour vérifier automatiquement que le code respecte les différentes règles faisant partie de ces normes. Pour le développement WEB, des guides de bonnes pratiquement sont publiés par l’OWASP.
+   - Utiliser des normes de programmation prenant en compte la sécurité. Des outils annexes peuvent être intégrés en utilisant un IDE, pour vérifier automatiquement que le code respecte les différentes règles faisant partie de ces normes. Pour le développement WEB, des guides de bonnes pratiquement sont publiés par l’OWASP.
 
 Le choix des technologies est crucial. Un langage peut-être plus approprié qu’un autre, en fonction du domaine d’application ou de fonctionnalité prévue.
 
@@ -155,4 +155,17 @@ Il faut aussi être vigilant sur le contenu et la qualité du code source dével
 
 Des outils de métriques de qualité de code permettrons de scanner le code dès son commit pour vérifier sa bonne qualité. Pour certains gestionnaires de code, il est possible suite a une configuration de refuser un commit si la qualité n'est pas satisfaisante.
 
-:warning: Il est indispensable de conserver les mots de passes et secret en dehors du dépot. :warning:
+:warning: Il est indispensable de conserver les mots de passes et secret en dehors du dépot. :warning: Plusieurs solutions existent pour cela : 
+
+  - Dans des fichiers à part, qui n'ont pas fait l'objet d'un commit. Il existe des solutions semi-automatique, tel que ".gitignore" pour Git. 
+
+  - Dans des variables d'environnement, en faisant attention que ces variables ne soit pas accidentellement écrites dans les logs ou affichées dans l'application.
+
+  - En utilisant des logiciels spécifiques de gestions de secrets ou de configuration.
+  
+Si par erreur des informations sensibles ont été commit, il faut purger complètement le dépot du code source, car même après modification, les données restent dans l'historique du dépot.
+
+Il est important de toujours vérifier son code avant de le publier en ligne.
+  
+Si cela doit tout de même être le cas, il existe des solutions (Nommé 'Greffon'), tel que git-crypt, permettant de chiffrer/déchiffrer automatiquement les fichiers.
+
