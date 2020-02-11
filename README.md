@@ -94,7 +94,7 @@ Le RGPD considère que la pseudonymisation permet de réduire les risques pour l
 
 ## 3. Préparer son développement.
 
-# Choix Méthodologique
+### Choix Méthodologique
 
 Lors de la mise en place d’un projet, il est préférable de :
 
@@ -105,7 +105,7 @@ Lors de la mise en place d’un projet, il est préférable de :
     • Si le projet est à destination du grand public, il est nécéssaire de mener une réglexion sur les paramètres relatifs a la vie privée.
 
 
-# Choix technologiques :
+### Choix technologiques :
 
 Pour l’architecture et les fonctionnalités :
 
