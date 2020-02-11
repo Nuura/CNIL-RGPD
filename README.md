@@ -77,7 +77,7 @@ Information supplémentaires :
     • Il n’éxiste pas de solution universelle d’anynomisation des données personelles
     • Le choix d’anonymisation et celui de sa méthode doit se faire au cas par cas selon les contextes d’usage et de besoin. (Nature, utilité, risques pour les personnes)
 
-# La pseudonymisation des données personnelles :
+### La pseudonymisation des données personnelles :
 
 Cette méthode constitue un compris entre la coservation de données brutes et la production de jeux de données anonymisées.
 
@@ -90,3 +90,47 @@ Cela consiste a remplacer les données directement identifiantes (Nom, prénom, 
 Les données soumises a une pseudonymisation sont considérés comme des données personnelles et restent donc soumises aux obligations RGPD.
 
 Le RGPD considère que la pseudonymisation permet de réduire les risques pour les personnes concernées et de contribuer la mise en conformité.
+
+
+## 3. Préparer son développement.
+
+# Choix Méthodologique
+
+Lors de la mise en place d’un projet, il est préférable de :
+
+    • Mettre la protection de la vie privée au coeur de vos développements en adoptant une méthodologie de Pirvacy By Design.
+
+    • Si utilisation des méthodes agiles il y a, il faut penser a intégrer la sécurité au coeur du processus.
+      
+    • Si le projet est à destination du grand public, il est nécéssaire de mener une réglexion sur les paramètres relatifs a la vie privée.
+
+
+# Choix technologiques :
+
+Pour l’architecture et les fonctionnalités :
+
+    • Il faut intégrer la protection de la vie privée, y compris les exigences de sécurité des données, dès la conception de l’application ou du service.
+      
+    • Garder la maitrise du système, pour garantir un haut niveau de sécurité. Un système clair, correctement conçu, et sécurisé permet une compréhension simple. En augmentant ensuite la compléxité petit à petit, il faut sécurisé les nouveautés qui s’ajoutent.
+      
+    • Pour minimiser les risques sur les utilisateurs finaux, il est conseillé de défendre le système en profondeur. (Exemple : Sécurité des champs d’un formulaire + A l’insertion en Base de données)
+
+
+Pour les outils et les pratiques : 
+
+    • Utiliser des normes de programmation prenant en compte la sécurité. Des outils annexes peuvent être intégrés en utilisant un IDE, pour vérifier automatiquement que le code respecte les différentes règles faisant partie de ces normes. Pour le développement WEB, des guides de bonnes pratiquement sont publiés par l’OWASP.
+
+Le choix des technologies est crucial. Un langage peut-être plus approprié qu’un autre, en fonction du domaine d’application ou de fonctionnalité prévue.
+
+Les langages et technologies éprouvés sont plus surs. En effet, ils font en général l’objet d’un audit afin de corriger les failles de sécurité les plus connues. Il faut cependant être vigilant et les mettres régulièrement à jour.
+
+Il ne faut pas développer sa solution dans un langage tout juste appris. Cela accroitrai le risque de failles du fait du manque d’expérience.
+
+## 4. Sécurité son environnement de développements
+
+Il faut, premièrement, recenser les mesures de sécurités existantes et définir un plan d’action permettant d’améliorer la converture de ses risques. 
+
+Dans un second temps, prendre en compte les risques sur les outils utilisés, nottament avec les outils SaaS et collaboratifs comme Slack, Trello, Github.
+
+
+
