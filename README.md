@@ -228,7 +228,26 @@ Pour la base de données, il est recommandé de restreindre au maximum les accè
 De plus, il faut, éventuellement, révoquer les privilèges d'administration des comptes, pour empêcher la modification de la structure de la base de données.
 Enfin, il est indispensable de se protéger contre les injections SQL et scripts, et favoriser le chiffrement des données.
 
-### Minimiser les données collectées
+## 8. Minimiser les données collectées
 
-Les données collectées peuvent être des données sensibles, il est important de réfléchir en amont aux différents type de données qui vont être collectées. Si des données ne sont pas nécéssaires pour tous les utilisateurs, ne pas les collecter.
-    
+Les données collectées peuvent être des données sensibles, il est important de réfléchir en amont aux différents types de données qui vont être collectées. Si des données ne sont pas nécéssaires pour tous les utilisateurs, ne pas les collecter. Également, si ce n'est pas nécéssaire, éviter de collecter des données "trop" précises (Exemple, plutot que la date de naissance, ne collecter que la date de naissance).
+
+Comme noté ci-dessus, les données collectées peuvent être sensibles, il faut absolument veiller a collecter le STRICT MINIMUM, que ce soit directement sur son application, ou dans les fichiers de journalisation, où il ne faut pas y stocker des données de santé, des mots de passe, ect. 
+
+Certaines fonctionnalités peuvent permettent d'améliorer l'expérience utilisateur, mais ne sont pas strictement nécéssaires au fonctionnement de l'application (La Géolocalisation par exemple). Dans ce cas, il faut laisser le choix a l'utilisateur, de choisir ou non de se faire géolocaliser. Si l'utilisateur donne une réponse positive, ces données ne doivent être concervées seulement le temps de l'utilisation de la fonctionnalité en question. Penser au temps de conservation de ces dernières.
+
+Pour faciliter le processus, mettre en place des mécanismes d'effacement automatique, avec, par exemple : 
+
+  - Un système de purge automatique à l'expiration de la durée de conservation des données concernées.
+  - Les données représentées physiquement doivent également être détruites.
+  - Si les données collectées seront utiles sur un long temps, réduire leur sensibilité avec la pseudonymisation, ou en les anonymisant.
+  - Journaliser les procédures d'effacement automatique. Ces journaux peuvent être utilisés comme preuve d'éffacement d'une données.
+  
+## 9. Gérer les utilisateurs
+
+### Les bonne pratiques de gestion des utilisateurs
+
+Pour commencer, chaque invididu doit posséder des identifiants uniques, que ce soit un utilisateur de l'application, ou un collaborateur au développement. Aussi, avant d'accéder a des données personnelles, imposer une authentification.
+
+Il faut assurer le fait que chaque utilisateur ou collaborateur ne puisse accéder strictement qu'aux données dont il a besoin. Le système doit prévoir des politiques de gestion d'accès aux données différenciées (En lecture, écriture, suppression..) suivant les utilisateurs et leurs besoins. La solution simple est un mécanisme de gestion des profils utilisateurs global, qui permettra de regrouper les différents droit en fonction d'un rôle exercé par un groupe d'utilisateurs dans l'application.
+  
