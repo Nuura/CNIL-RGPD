@@ -249,5 +249,27 @@ Pour faciliter le processus, mettre en place des mécanismes d'effacement automa
 
 Pour commencer, chaque invididu doit posséder des identifiants uniques, que ce soit un utilisateur de l'application, ou un collaborateur au développement. Aussi, avant d'accéder a des données personnelles, imposer une authentification.
 
-Il faut assurer le fait que chaque utilisateur ou collaborateur ne puisse accéder strictement qu'aux données dont il a besoin. Le système doit prévoir des politiques de gestion d'accès aux données différenciées (En lecture, écriture, suppression..) suivant les utilisateurs et leurs besoins. La solution simple est un mécanisme de gestion des profils utilisateurs global, qui permettra de regrouper les différents droit en fonction d'un rôle exercé par un groupe d'utilisateurs dans l'application.
-  
+Il faut assurer le fait que chaque utilisateur ou collaborateur ne puisse accéder strictement qu'aux données dont il a besoin. Le système doit prévoir des politiques de gestion d'accès aux données différenciées (En lecture, écriture, suppression..) suivant les utilisateurs et leurs besoins. La solution simple est un mécanisme de gestion des profils utilisateurs global, qui permettra de regrouper les différents droit en fonction d'un rôle exercé par un groupe d'utilisateurs dans l'application. Les journaux engendrés par l'utilisation de ce méchanisme ne doivent pas être conservés plus longtemps que nécéssaire. En général, une durée de 6 mois est adéquate.
+
+### Fluidifier la gestion des profils d'habilitation
+
+Pour garantir une sécurité, documenter ou automatiser les procédures de gestion des collaborateurs, d'inscription et de désinscription des utilisateurs. Ces procédures doivent, par exemple, encadrer la situation ou un collaborateur cesse de travail dans le projet, et ne doit plus avoir accès a des ressources.
+
+La gestion des utilisateurs et collaborateurs impliquent une revue régulière des droits accordés, suivant la modification des usages et de l'organisation du projet. 
+
+Enfin, il est important de ne pas utiliser le compte "super admin" pour réaliser des opérations conventionnelles. De plus, celui-ci doit être fortement protégé, et être connu par le minimum de personne possible.
+
+## 10. Maitriser les bibliothèques et SDK
+
+### Faire un choix éclairé
+
+Il est nécéssaire d'évaluer l'intêret de l'ajout d'une dépendance. Plus il y a de dépendances ajoutées, plus la surface d'attaque de son système est grande. Si une bibliothèque inclût plusieurs fonctionnalités, il faut désactiver celles dont on ne se sert pas, cela réduit le nombre de bugs potentiels. (Pour Exemple, Jquery-UI, propose de lui même, de télécharger seulement les fonctionnalités dont on a besoin.) 
+
+SCREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEN
+
+Plusieurs critères sont a prendre en compte lors du choix de sa bibliothèque :
+
+  - Si l'on souhaite utiliser du code OpenSource, essayer de choisir des projets avec une communauté active, des mises à jour régulières et une documentation fournie.
+  - Si l'on utilise des solutions avec un support commercial, s'assurer que le code sera maintenant le temps de la vie du projet.
+  - Prendre en compte la vie privée : Certaines solutions se rénumèrent en collectant et valorisant les données personnelles. il faut s'assurer que ces solutions respectent la législation en vigueur, et qu'un mécanisme est prévu pour demander le consentement des utilisateurs.
+  - Il est décosneillé d'implémenter des algorythmes ou des protocoles cryptographiques soi-même, il existe des bibliothèques en ligne reconnues, maintenues et simple d'utilisation.
