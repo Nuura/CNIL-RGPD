@@ -275,3 +275,8 @@ Plusieurs critères sont a prendre en compte lors du choix de sa bibliothèque :
   - Il est décosneillé d'implémenter des algorythmes ou des protocoles cryptographiques soi-même, il existe des bibliothèques en ligne reconnues, maintenues et simple d'utilisation.
 
 ### Évaluer les éléments choisis
+
+C'est important de lire la documentation et de changer la configuration par défaut (Souvent fourni avec la dépendance). Il faut connaître le fonctionnement des dépendances incluses dans le projet. En général, le fichier de configuration par défaut présente de nombreuses failles de sécurité, il faut prendre le temps de le configurer. Aussi, c'est une bonne chose d'auditer ses bibliothèques et SDK, cela permet de déterminer les obligations à respecter au niveau de la protection des données et d'établir la résponsabilité des acteurs. Enfin, Cartographier ces dernières dans le but de mieux agir si un problème affecte l'une d'elle.
+
+:warning: Attention au typosquattage, qui consiste a prendre un nom de dépendance très similaire a celle qui est très connue. Le paquet "typosquatté", n'est pas déployé par l'organisation de base, et peut être malveillants.
+
