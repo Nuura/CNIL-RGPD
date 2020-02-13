@@ -273,3 +273,5 @@ Plusieurs critères sont a prendre en compte lors du choix de sa bibliothèque :
   - Si l'on utilise des solutions avec un support commercial, s'assurer que le code sera maintenant le temps de la vie du projet.
   - Prendre en compte la vie privée : Certaines solutions se rénumèrent en collectant et valorisant les données personnelles. il faut s'assurer que ces solutions respectent la législation en vigueur, et qu'un mécanisme est prévu pour demander le consentement des utilisateurs.
   - Il est décosneillé d'implémenter des algorythmes ou des protocoles cryptographiques soi-même, il existe des bibliothèques en ligne reconnues, maintenues et simple d'utilisation.
+
+### Évaluer les éléments choisis
