@@ -280,3 +280,19 @@ C'est important de lire la documentation et de changer la configuration par déf
 
 :warning: Attention au typosquattage, qui consiste a prendre un nom de dépendance très similaire a celle qui est très connue. Le paquet "typosquatté", n'est pas déployé par l'organisation de base, et peut être malveillants.
 
+
+### Maintenir les bibliothèques et SDK
+
+Pour garantir un niveau de sécurité stables, il est conseillé de :
+
+  - Utiliser des systèmes de gestion de dépendances, qui permettent de maintenir une liste des dépendances à jour, tel que Yum, Apt, Maven ou encore Pip.
+  - Gérer les mises à jour de vos dépendances le plus vite possible, surtout si elles corrigent des vulnérabilités.
+  - Faire attention au versions de packages en fin de support, qui ne seront plus maintenues par la suite.
+  - Surveillez les projets open sources, nottament le changement de propriétaire du domaine ou du package.
+  
+  
+## 11. Veiller à la qualité de votre code et sa documentation 
+
+### Documentez le code et l'architecture
+
+Il arrive que la documentation soit mise de côté lors du développement, par manque de temps ou de visibilité. Il faut garder à l'esprit qu'elle est cruciale pour la maintenabilité du projet, que ce soit p
