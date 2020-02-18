@@ -293,6 +293,24 @@ Pour garantir un niveau de sécurité stables, il est conseillé de :
   
 ## 11. Veiller à la qualité de votre code et sa documentation 
 
-### Documentez le code et l'architecture
+### Documenter le code et l'architecture
 
-Il arrive que la documentation soit mise de côté lors du développement, par manque de temps ou de visibilité. Il faut garder à l'esprit qu'elle est cruciale pour la maintenabilité du projet, que ce soit p
+Il arrive que la documentation soit mise de côté lors du développement, par manque de temps ou de visibilité. Il faut garder à l'esprit qu'elle est cruciale pour la maintenabilité du projet, que ce soit pour comprendre globalement le fonctionnement du code, ou de savoir quelles parties de ce dernier sont affectées par une modification.
+
+Pour la documentation de l'architecture, prévilégiez des schémas et explications claires.
+
+Il est conseillé de maintenir la documentation en même temps que le code, et également de versionner cette dernière, en assiociant chaque commit de code avec la bonne partie documentée.  
+
+### Contrôler la qualité de votre code et de sa documentation
+
+Un code de qualité passe par l'adoption de bonnes pratiques et de convention de codage, appliquée de manière adaptée sur l'ensemble du programme. En plus d'une convention, voici quelques bonnes pratiques : 
+
+  - Utilisez des noms de variables et de fonctions explicites, cela favorise la compréhension globale.
+  - Correctement indenter son code, cela permet de voir la structure du code plus facilement.
+  - Éviter la redondance de code.
+  - Pour contrôler la qualité du code, nous avons cités plus haut les plugins d'IDE, ou les logiciels de mesure de la qualité du code source, pour signaler les duplications de code, ou les bugs potentiels.
+  
+
+## 12.Tester ses applications
+
+Le premier point important est l'automatisation des tests. Les tests de développement (Unitaires, fonctionnels) vont vérifier l'adéquation entre les spécifications et le fonctionnement final. Quant aux tests de sécurité, qui sont des tests a données aléatoires, vont vérifier que le code continue d'avoir un comportement acceptable si le programme est forcé de s'éloigner de son utilisation normale, et qu'il ne compte pas de faille de sécurité. Ces de
