@@ -435,3 +435,5 @@ Ces méchanismes de suppresions de données des bases actives permettent de gara
 Il ne faut pas conserver les données en base actives en les notant simplement comme archivées. les données archivées (Les archives intermédiaire donc) ne doivent être accéssible qu'a un service spécial chargé d'y accéder et de les sortir des archives le cas échéant.
 Il faut donc veuiller a prévoir des modalités d'accès spécifique à ses archives, car l'utilisation d'une archive doit rester ponctuelle et exceptionnelle.
 Si possible, mettre en place la même implémentation lors de la mise en oeuvre de la purge ou de l'anonymisation des données que celle gérant le droit a l'effacement. Celui permet de garantir un fonctionnement homogène du système.
+
+### Exemple de durée de conservation
