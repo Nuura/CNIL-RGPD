@@ -336,3 +336,28 @@ Si les données personnes sont tout de même utilisées hors production, il faut
 Pour éviter cela, construire un jeu de données fictives (Aussi appelé "Fixture") qui auront la structure des données qui seront traitées par l'application. La fuite de données fictives n'entrainera aucun impact pour les personnes.
 Si il y a besoin d'importer et d'utiliser des configuration existantes depuis la production pour les tests, penser à anonymiser les données personnelles présentes.
 
+## 13. Informer les personnes
+
+### Qui informer et quand le faire ? 
+
+Il faut informer les personnes concernées : 
+
+  - En cas de collecte directe des données, c'est à dire lorsque des données sont recueillies directement auprès des personnes. Par exemple : Formulaire, achat en ligne, souscription d'un contrat, ouverture de compte bancaire.
+  - Lors du receuil des informations via des dispositif d'observations de l'activité des personnes. Par exemple : Analyse de la navigation internet, geolocalisation, mesure d'audience.
+  - En cas de collecte indirecte, c'est a dire aurpès de partenaires commerciaux, de data brokers ou de sources accessibles au public.
+
+L'information de la collecte est nécéssaire :
+
+  - Au moment du recueil des données, en cas de recueil directe.
+  - Dès que possible en cas de collecte indirecte (Nottament lors du premier contact avec la personne) et au plus tard dans un délai d'un mois. (Sauf exeception, par exemple, oblifation légale de secret professionnel).
+  - En cas d'évènement particulier ou de modification substantielle. Par exemple : Nouvelle finalité, changement dans les modalités d'exercices des droits, violation des données.
+  
+
+### Quelles informations dois-je donner ? 
+
+Dans tout les cas, il faut préciser : 
+
+  - L'identité et coordonnées de l'organisme qui collecte les données
+  - Les finalités de cette collecte.
+  - La base légale sur laquelle repose le traitement de ces données.
+  - Le caractère obligatoire ou facultatif
