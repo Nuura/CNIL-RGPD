@@ -313,4 +313,26 @@ Un code de qualité passe par l'adoption de bonnes pratiques et de convention de
 
 ## 12.Tester ses applications
 
-Le premier point important est l'automatisation des tests. Les tests de développement (Unitaires, fonctionnels) vont vérifier l'adéquation entre les spécifications et le fonctionnement final. Quant aux tests de sécurité, qui sont des tests a données aléatoires, vont vérifier que le code continue d'avoir un comportement acceptable si le programme est forcé de s'éloigner de son utilisation normale, et qu'il ne compte pas de faille de sécurité. Ces de
+### Automatisations des tests
+
+Le premier point important est l'automatisation des tests. Les tests de développement (Unitaires, fonctionnels) vont vérifier l'adéquation entre les spécifications et le fonctionnement final. Quant aux tests de sécurité, qui sont des tests a données aléatoires, vont vérifier que le code continue d'avoir un comportement acceptable si le programme est forcé de s'éloigner de son utilisation normale, et qu'il ne compte pas de faille de sécurité. Ces deux types de tests sont importants pour le bon fonctionnement de son application.
+
+La mise en place d'un système d'intégration continue est aussi conseillée, permettant de lancer les tests automatiquement après chaque modification du code source.
+
+### Intégrez les tests dans votre stratégie d'entreprise
+
+Dans la mise en place de l'environnement de tests, les métriques acceptables doivent être définis conjointement par toutes les parties avant le développement.
+
+Les métriques auxquelles il faut réfléchir sont, par exemple : 
+  - Le taux de couverture des tests et leur type.
+  - Le taux de réplication du code.
+  - Le nombre de vulnérabilités et leur type.
+  
+### Attention aux données de test.
+
+Les données "réelles" ne doivent pas être utilisées pendant la phase de développement et de test. Les utiliser revient a les détourner de leur finalité initiale. 
+Si les données personnes sont tout de même utilisées hors production, il faut souligner que les risques de sécurité sont augmentés. En effet, cela provoque un accès à des données qui n'ont pas le besoin d'être connues. Cela multiplie également le    nombre d'espaces ou sont stockées ses données.
+
+Pour éviter cela, construire un jeu de données fictives (Aussi appelé "Fixture") qui auront la structure des données qui seront traitées par l'application. La fuite de données fictives n'entrainera aucun impact pour les personnes.
+Si il y a besoin d'importer et d'utiliser des configuration existantes depuis la production pour les tests, penser à anonymiser les données personnelles présentes.
+
