@@ -389,3 +389,8 @@ doit dans les 72heures signalé la violation auprès de la CNIL (Si les données
 Si le risque est trop élevé, l'organisme a pour obligation d'informer les personnes concernées le plus rapidement possible, et d'adresser des conseils à ces dernières (Annulation carte bancaire, modification mot de passe, ect)
 
 Enfin, la notification de la violation à la CNIL doit se faire via le site web de la CNIL.
+
+
+## 14. Préparer l'exercice des droits des personnes
+
+
