@@ -360,4 +360,32 @@ Dans tout les cas, il faut préciser :
   - L'identité et coordonnées de l'organisme qui collecte les données
   - Les finalités de cette collecte.
   - La base légale sur laquelle repose le traitement de ces données.
-  - Le caractère obligatoire ou facultatif
+  - Le caractère obligatoire ou facultatif (Qui nécéssite une reflexion en amount lors du développement) et les conséquences pour la personne en cas de non-fourniture des données (Désactivation de certaines fonctionnalités par exemple)
+  - Les destinataires, ou catégories de déstinataires des données.
+  - La durée de conservation des données
+  - L'existence des droits des personnes concernées ainsi que les moyens de les exercer (Droit d'accès, d'effacement..)
+  - Les coordonnées du délégué à la protection des données de l'organisme, ou un point de contact sur les questions concernant la protection des données.
+  - Le droit d'introduire une réclamation auprès de la CNIL.
+  
+Dans certains cas, des informations supplémentaires sont demandées, par exemple dans le cas d'un transfert de données hors de l'UE.
+
+Si il y a une collecte indirecte, il faut ajouter : 
+  - Les catégories de données recueillies.
+  - La provenance des données (En indiquant si elles sont issues de sources publiques)
+  
+### Sous quelle forme dois-je fournir ces informations ? 
+
+L'information doit être facile d'accès, l'utilisateur doit pouvoir la trouver dans difficultés. Elle doit être fournie de manière claire et compréhensible (Vocabulaire simple) et adaptée au public visé (Attention particulière aux enfants et personne vulnérables). Les informations doivent être écritent de manière consice, sans noyer l'utilisateur dans pleins d'informations. Il faut également pouvoir distinguer les informations qui sont liées a laa vie privée, et celles qui ne le sont pas. (Comme les clauses contractuelles)
+
+### Quelle communication effectuer lorsque la sécurité est compromise ? 
+
+Si un organisme, par erreur ou négligence, subit, accidentellement ou de manière malintentionnée, une violation des données (Atteinte a la sécurité des données), c'est a dire : 
+  - Destruction
+  - Perte
+  - Altération
+  - Divulgation non autorisée
+doit dans les 72heures signalé la violation auprès de la CNIL (Si les données présentent un risque pour les droits et libertés des personnes).
+
+Si le risque est trop élevé, l'organisme a pour obligation d'informer les personnes concernées le plus rapidement possible, et d'adresser des conseils à ces dernières (Annulation carte bancaire, modification mot de passe, ect)
+
+Enfin, la notification de la violation à la CNIL doit se faire via le site web de la CNIL.
