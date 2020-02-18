@@ -393,4 +393,24 @@ Enfin, la notification de la violation à la CNIL doit se faire via le site web 
 
 ## 14. Préparer l'exercice des droits des personnes
 
+### Les mesures minimales à mettre en place
+
+Tous les organismes utilisant des données personnelles ont l'obligation d'indiquer où et comment les personnes peuvent exercer leur droits relatifs à ces données. Par exemple, dans la politique de vie privée du projet.
+
+Voici quelques exemples de droits et leur possible implémentation :
+
+Le droit d'accès : Les personnes ont le droit de demander et d'obtenir une copie de toutes les informations que vous avez à leur sujet. Cela permet au demandeur de savoir si des données lui appartenant sont traitées et d'en obtenir une copie. Également, cela permet de contrôler l'exactitude des données.
+- Implémentation : Prévoir une fonctionnalité affichant toutes les données relatives à une personne. Si les données sont trop volumineuses, proposer le téléchargement d'une archive.
+
+Le droit a l'effacement : Les personnes ont le droit de demander l'effacement de l'intégralité des données que l'on détient sur elles.  
+- Implémentation : 
+    - 1. Prévoir une fonctionnalité permettant d'effacer toutes les données relatives à une personnes.
+    - 2. Prévoir une notification automatique qui prévient les sous-traitants afin qu'ils effacent également les données.
+    - 3. Prévoir un effacement dans les sauvegardes, ou tout autre support permettant la restauration de ces données.
+
+Le droit d'opposition : Dans certains cas, les personnes ont le droit de s'opposer à ce que leur données soient utilisées pour un objectif précis.
+- Implémentation : Prévoir une fonctionnalité permettant à la personne de s'opposer au traitement. Si la personne exerce son droit, le responsable doit supprimer les données la concernant, et ne plus en collecter.
+ 
+Le droit de portabilité : 
+Les personnes ont le droit de récuperer leur données dans un format lisible par machine, pour leur propore usage ou pour les fournir a un autre organisme.
 
