@@ -412,5 +412,26 @@ Le droit d'opposition : Dans certains cas, les personnes ont le droit de s'oppos
 - Implémentation : Prévoir une fonctionnalité permettant à la personne de s'opposer au traitement. Si la personne exerce son droit, le responsable doit supprimer les données la concernant, et ne plus en collecter.
  
 Le droit de portabilité : 
-Les personnes ont le droit de récuperer leur données dans un format lisible par machine, pour leur propore usage ou pour les fournir a un autre organisme.
+Les personnes ont le droit de récuperer leur données dans un format lisible par machine, pour leur propore usage ou pour les fournir à un autre organisme.
+- Implémentation : Prévoir une fonctionnalité d'export au format lisible par un ordinateur(CSV, XML, JSON, ect)
 
+Le droit de rectification : Les personnes ont le droit de demander la modification de leurs données lorsque celles-ci sont incorrectes afin de limiter l'utilisation ou la diffusion d'informations érronées.
+- Implémentation : Permettre a l'utilisateur de pouvoir modifier ses données.
+
+Le droit à la limitation du traitement : Les personnes ont le droit de demander à ce que le traitement de leurs données soit bloqué pendant un certain temps, par exemple le temps d'examiner une contestation de sa part sur l'utilisation de ses données ou une demande d'exercice de droits.
+- Implémentation : Permettre aux administrateurs de mettre des données relatives à une personne en "quarantaine" : Ces données ne pourront alors plus être lues ou modifiées.
+
+## 15. Gérer la durée de conservation des données
+
+### Les cycles de conservation des données.
+
+Le cycle de conservation des données personnelles peut être divisé en 3 phases succéssives distinces :
+
+- La base active 
+- L'archivage intermédiaire
+- L'archivage définitif ou la suppression
+
+Ces méchanismes de suppresions de données des bases actives permettent de garantir que les données sont conservées et accessibles par les services opérationnels uniquement le temps nécéssaire à l'accomplissement de l'objectif poursuivi par le traitement.
+Il ne faut pas conserver les données en base actives en les notant simplement comme archivées. les données archivées (Les archives intermédiaire donc) ne doivent être accéssible qu'a un service spécial chargé d'y accéder et de les sortir des archives le cas échéant.
+Il faut donc veuiller a prévoir des modalités d'accès spécifique à ses archives, car l'utilisation d'une archive doit rester ponctuelle et exceptionnelle.
+Si possible, mettre en place la même implémentation lors de la mise en oeuvre de la purge ou de l'anonymisation des données que celle gérant le droit a l'effacement. Celui permet de garantir un fonctionnement homogène du système.
