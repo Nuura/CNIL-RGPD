@@ -437,3 +437,54 @@ Il faut donc veuiller a prévoir des modalités d'accès spécifique à ses arch
 Si possible, mettre en place la même implémentation lors de la mise en oeuvre de la purge ou de l'anonymisation des données que celle gérant le droit a l'effacement. Celui permet de garantir un fonctionnement homogène du système.
 
 ### Exemple de durée de conservation
+
+  - Les données relatives à la gestion de la paie ou au contrôle des horaires des salariés peuvent conservées pendant 5ans maximum.
+  - Les données figurant dans un dossier médical doivent être conservées 20 ans.
+  - Les coordonnées d'un prospect ne répondant à aucune sollicitation peuvent être conservées pendant 3 ans.
+  - Les données de journalisation peuvent être conservées durant 6 mois.
+  
+## 16. Gérer la durée de conservation des données
+
+### Définition des bases légales prévues par le RGPD
+
+Pour les développements pour un organisme privé (Entreprises, associations, ect), les bases légales les plus utilisées sont : 
+
+  - Le contrat : Le traitement est nécessaire à l'exécution ou à la préparation d'un contrat entre la personne concernée et l'organisme mettant en place le traitement.
+  - L'intêret légitime : L'organisme mettant en place le traitement poursuit un intérêt "légitime" à mettre en place le traitement et celui-ci n'est pas suspectible d'affecter les droits et libertés des personnes concernées.
+  - Le consentement : La personne concernée a explicitement consenti au traitement.
+  
+ Si, le développement est pour un organisme poursuivant des missions d'intérêt public, d'autres bases légales peuvent être utilisées : 
+  - L'obligation légale : Le traitement doit-être imposé par des textes réglementaires.
+  - La mission d'intêret public : Le traitement est nécessaire à l'exécution d'une mission d'intérêt public.
+  
+Des fiches pratiques sont mises à disposition par la CNIL afin d'accompagner dans le choix des bases légales les plus adaptes à vos traitements. La CNIL propose également de vérifier depuis leur site, qu'un texte n'impose pas de contraintes particulères (Prospection commerciale par voie éléctronique, traceurs, ect).
+
+Enfin, dans des cas très spécifiques, la sauvegarde des intêrets vitaux peut être retenue comme base légale. (Pour éviter la propagation d'épidémies, ou des cas d'urgence humanitaire par exemple.)
+
+### Choisir la base légale adéquate
+
+Dans ce choix, une seule base doit-être choisie pour une finalité donnée. Il n'est pas possible de cumuler pour une même finalité. Si l'organisme est public, l'obligation légale et la mission d'intérêt public seront les plus pertinentes dans la majorité des cas.
+
+Si le traitement s'inscrit dans une relation contractuelle et que sa finalité est objectivement et strictement nécessaire à la fourniture du service de l'utilisateur (Par exemple, dans le cadre d'un site E-commerce, le nom, prénom et adresse pour créer un  compte), alors la base légale du contrat devrait être appropriée.
+
+Si, au contraire, le traitement ne s'inscrit pas dans une relation contractuelle avec l'utilisateur, les bases légales du consentement ou de l'intérêt légitime peuvent être mobilisées. Si le traitement est intrusif (Profilage, collecte géolocalisation), le consentement est susceptible d'être la base légale appropriée.
+
+Si le traitement contient des données sensibles, il faudra, en plus de la base légale, identifier une exception prévue par l'article 9 du RGPD (La personne donne son consentement explicite, par exemple)
+
+
+### Les exercices de droits et les modalitées d'information à prévoir suivant la base légale
+
+Ci-dessous un tableau récapitulant les exercices des droits à prevoir suivant les bases legales choisies : 
+
+SCREEEEEEEEEEEEEEEN
+
+Les bases légales doivent toujours figurer dans les informations transmises à la personne. De plus, lorsque le traitement est fondé sur l'intérêt légitime, il faut indique les intérêts légitimes poursuivis (Lutte contre la fraude, sécurité du système)
+
+Il est recommandé de documenter le choix des bases légales, cela aidera a cartographier les traitements associés à la documentation technique, et d'avoir une vision globale plus claire.
+
+### Le cas spécifique des cookies et autres traceurs
+
+La directive européenne ePrivacy requiert le consentement de l'utilisateur avant toute action visant à stocker des informations, que ce soit via des cookies, identifiants, des traceurs. Cette directive s'applique également avant d'accéder a des données stockées dans l'équipement de l'utilisateur.
+
+Il éxiste cependant une exception lorsque les cookies ont pour finalité exclusive de permettre ou faciliter la communication par voie électronique, ou sont strictement nécéssaires à la fourniture du service demandé par l'utilisateur.
+
