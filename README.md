@@ -488,3 +488,37 @@ La directive européenne ePrivacy requiert le consentement de l'utilisateur avan
 
 Il éxiste cependant une exception lorsque les cookies ont pour finalité exclusive de permettre ou faciliter la communication par voie électronique, ou sont strictement nécéssaires à la fourniture du service demandé par l'utilisateur.
 
+Remarque : Le fait d'utiliser un seul traceur pour de multiples pour de multiples finalités ne décharge pas de receuillir le consentements pour les finalités qui le nécéssitent. Par exemple, un cookie d'authentification aussi utilisé à des fins publicitaire, nécéssitera l'accord de l'utilisateur pour cette dernière finalité.
+
+
+## 16. Mesurer la fréquentation de vos sites web et de vos applications
+
+### Obtenir le consentement
+
+En général, avant de déposer ou lire un cookie ou un traceur, les éditeurs de sites ou d'applications doivent informer les internautes de la finalités des cookies, obtenir leur consentement, et surtout leur fournir un moyen de les refuser. Il faut prendre en compte que ces contraintes sont aussi valables pour la mesure d'audience.
+
+### Bénéficier de l'exemption de consentement
+
+Il éxiste des exceptions concernant les cookies et traceurs utilisés pour la mesure d'audience. En effet, ils peuvent être dispensés de consentement.
+
+Ces exceptions sont soumises a des conditions, qui sont les suivantes : 
+
+  - D'informer les utilisateurs de leur utilisation
+  - De leur donner la possibilité de s'y opposer
+  - De limiter le dispositif aux seules finalités suivantes :
+    - La mesure d'audience
+    - L'A/B Testing (Technique de marketing consistant à proposer plusieurs variantes d'un même objet qui diffèrent selon un seul critère, la couleur par exemple)
+    
+  - De ne pas recouper les données traitées avec d'autres traitements (Fichier clients, statistiques de fréquentation).
+  - De limiter la portée du traceur à un seul éditeur de site ou d'application.
+  - De tronquer le dernier octet de l'adresse IP.
+  - De limiter la durée de vie des traceux à 13 Mois.
+  
+Si ces conditions sont réspectées, on passe d'un régime d'opt-in à un régime d'opt-out (Opt-in : Obtenir l'accord du destinaire de la publicité (Si il n'a pas dit oui, c'est non) / Opt-out : Le destinataire de la publicité ne s'est pas opposé (S'il n'a pas dit non, c'est oui))
+
+À noter qu'il est possible pour un même sous-traitant de fournir un service de mesure d'audience comparatif à de multiples éditeurs, sous réserve que les données soient collectées, traitées et stockées de manière indépendante pour chaque éditeur et que les traceurs soient indépendants les uns des autres.
+
+### En pratique
+
+En pratique, la plus grandes parties des offres de mesures d'audience ne seront pas éligibles à cette exemption, quelle que soit leur configuration
+Pour bénéficier de cette exemption, il est conseillé de se rapprocher de son éditeur de logiciels, ou d'utiliser des logiciels libres tel que Piwik, qui propose de configurer ses paramètres soi-même.
